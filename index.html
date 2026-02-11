@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Victorian | Premium Metal Fireplaces</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --gold-primary: #D4AF37;
+  --gold-secondary: #FFD700;
+  --gold-light: #FFF9E6;
+  --silver-primary: #C0C0C0;
+  --silver-secondary: #E8E8E8;
+  --brass-primary: #B87333;
+  --brass-secondary: #CD7F32;
+  --black-primary: #1A1A1A;
+  --black-secondary: #333333;
+  --accent-gradient: linear-gradient(135deg, #d4af37, #c0c0c0, #b87333);
+  --bg-gradient: linear-gradient(135deg, #f8f5f0 0%, #f0ede8 50%, #e8e5e0 100%);
+  --section-gradient: linear-gradient(145deg, #ffffff 0%, #faf9f7 100%);
+  --shadow-light: 0 8px 30px rgba(0, 0, 0, 0.06);
+  --shadow-medium: 0 15px 40px rgba(0, 0, 0, 0.1);
+  --shadow-strong: 0 20px 50px rgba(0, 0, 0, 0.15);
+  --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-gradient);
+  color: #333;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.95)), 
+              url('https://images.unsplash.com/photo-1513584684374-8bab748fbf90?q=80&w=2068');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--accent-gradient);
+  z-index: 2;
+}
+
+.header-content {
+  position: relative;
+  z-index: 1;
+  animation: fadeInDown 1s ease;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  background: linear-gradient(to right, var(--gold-primary), var(--silver-primary), var(--brass-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 15px;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+}
+
+header p {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 800px;
+  margin: 0 auto 25px;
+  font-weight: 300;
+}
+
+.tagline {
+  display: inline-flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.tag {
+  background: rgba(212, 175, 55, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-weight: 500;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  transition: var(--transition);
+}
+
+.tag:hover {
+  transform: translateY(-5px);
+  background: rgba(212, 175, 55, 0.25);
+}
+
+/* SLIDER */
+.slider-container {
+  margin: 60px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+  position: relative;
+}
+
+.slider-title {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: var(--black-primary);
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slider-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--accent-gradient);
+  border-radius: 2px;
+}
+
+.slider {
+  display: flex;
+  overflow: hidden;
+  gap: 25px;
+  padding: 20px;
+  border-radius: 20px;
+  background: var(--section-gradient);
+  box-shadow: var(--shadow-medium);
+  position: relative;
+}
+
+.slider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--accent-gradient);
+  border-radius: 20px 20px 0 0;
+}
+
+.slider-item {
+  min-width: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+  position: relative;
+}
+
+.slider-item:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-strong);
+}
+
+.slider-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.slider-item:hover img {
+  transform: scale(1.05);
+}
+
+.slider-caption {
+  padding: 20px;
+  background: white;
+  font-weight: 600;
+  text-align: center;
+  color: var(--black-primary);
+  font-size: 1.1rem;
+}
+
+.slider-caption i {
+  margin-right: 8px;
+  color: var(--gold-primary);
+}
+
+@keyframes slide {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-20px); }
+}
+
+/* SECTIONS */
+.sections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 30px;
+  margin: 50px auto;
+  padding: 0 20px;
+  max-width: 1200px;
+}
+
+@media (max-width: 768px) {
+  .sections-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section-card {
+  background: var(--section-gradient);
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.section-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-medium);
+}
+
+.section-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+}
+
+.section-card.gold::before { background: linear-gradient(to right, var(--gold-primary), var(--gold-secondary)); }
+.section-card.silver::before { background: linear-gradient(to right, var(--silver-primary), var(--silver-secondary)); }
+.section-card.brass::before { background: linear-gradient(to right, var(--brass-primary), var(--brass-secondary)); }
+.section-card.black::before { background: linear-gradient(to right, var(--black-primary), var(--black-secondary)); }
+
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  font-size: 1.8rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.section-card:hover .section-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.gold .section-icon { background: linear-gradient(135deg, var(--gold-primary), var(--gold-secondary)); color: white; }
+.silver .section-icon { background: linear-gradient(135deg, var(--silver-primary), var(--silver-secondary)); color: #333; }
+.brass .section-icon { background: linear-gradient(135deg, var(--brass-primary), var(--brass-secondary)); color: white; }
+.black .section-icon { background: linear-gradient(135deg, var(--black-primary), var(--black-secondary)); color: white; }
+
+.section-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.gold .section-header h2 { color: var(--gold-primary); }
+.silver .section-header h2 { color: var(--silver-primary); }
+.brass .section-header h2 { color: var(--brass-primary); }
+.black .section-header h2 { color: var(--black-primary); }
+
+.section-card p {
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+}
+
+/* FEATURES LIST */
+.features-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.features-list li {
+  margin: 15px 0;
+  padding-left: 40px;
+  position: relative;
+  transition: var(--transition);
+}
+
+.features-list li:hover {
+  transform: translateX(5px);
+}
+
+.features-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.gold .features-list li::before { 
+  content: '\f521';
+  background: linear-gradient(135deg, var(--gold-primary), var(--gold-secondary));
+}
+.silver .features-list li::before { 
+  content: '\f3ed';
+  background: linear-gradient(135deg, var(--silver-primary), var(--silver-secondary));
+  color: #333;
+}
+.brass .features-list li::before { 
+  content: '\f2dc';
+  background: linear-gradient(135deg, var(--brass-primary), var(--brass-secondary));
+}
+.black .features-list li::before { 
+  content: '\f06d';
+  background: linear-gradient(135deg, var(--black-primary), var(--black-secondary));
+}
+
+/* SPECIAL SECTIONS */
+.special-section {
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+  color: white;
+  border-radius: 20px;
+  padding: 40px;
+  margin: 50px auto;
+  max-width: 1200px;
+  box-shadow: var(--shadow-strong);
+  position: relative;
+  overflow: hidden;
+}
+
+.special-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--accent-gradient);
+}
+
+.special-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.special-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  font-size: 1.5rem;
+  color: white;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+}
+
+.special-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  background: linear-gradient(to right, var(--gold-primary), var(--silver-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.special-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.special-list li {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid var(--gold-primary);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.special-list li::before {
+  content: '\f00c';
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(212, 175, 55, 0.3);
+  font-size: 2rem;
+}
+
+.special-list li:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+  border-left-color: var(--gold-secondary);
+}
+
+/* FOOTER */
+footer {
+  background: linear-gradient(135deg, #111, #222);
+  color: #fff;
+  padding: 60px 20px 30px;
+  margin-top: 80px;
+  position: relative;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--accent-gradient);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.footer-section h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  color: var(--gold-primary);
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--gold-primary);
+}
+
+.contact-info {
+  list-style: none;
+}
+
+.contact-info li {
+  margin: 18px 0;
+  display: flex;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.contact-info li:hover {
+  transform: translateX(5px);
+}
+
+.contact-info i {
+  width: 40px;
+  height: 40px;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  color: var(--gold-primary);
+  font-size: 1.1rem;
+  transition: var(--transition);
+}
+
+.contact-info li:hover i {
+  background: rgba(212, 175, 55, 0.2);
+  transform: scale(1.1);
+}
+
+.contact-info a {
+  color: #ddd;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.contact-info a:hover {
+  color: var(--gold-primary);
+}
+
+.business-hours {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 15px;
+}
+
+.hour-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hour-item:last-child {
+  border-bottom: none;
+}
+
+.consultation-cta {
+  background: linear-gradient(135deg, var(--gold-primary), var(--brass-primary));
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.consultation-cta h4 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.consultation-btn {
+  display: inline-block;
+  background: white;
+  color: var(--black-primary);
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.consultation-btn:hover {
+  background: transparent;
+  color: white;
+  border-color: white;
+  transform: translateY(-5px);
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .sections-grid {
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+  }
+  
+  .section-card {
+    padding: 25px;
+  }
+  
+  .special-section {
+    padding: 25px;
+  }
+  
+  .slider-item {
+    min-width: 250px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-content">
+    <h1><i class="fas fa-fire"></i> The Victorian – Premium Metal Fireplaces <i class="fas fa-fire"></i></h1>
+    <p>Expertly crafted metal, copper, steel, and iron fireplaces designed for luxury living spaces</p>
+    <div class="tagline">
+      <span class="tag"><i class="fas fa-hammer"></i> Handcrafted Excellence</span>
+      <span class="tag"><i class="fas fa-gem"></i> Premium Materials</span>
+      <span class="tag"><i class="fas fa-award"></i> Lifetime Guarantee</span>
+    </div>
+  </div>
+</header>
+
+<!-- SLIDER -->
+<div class="slider-container">
+  <h2 class="slider-title">Our Craftsmanship Gallery</h2>
+  <div class="slider">
+    <div class="slider-item">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070" alt="Gold Finish Fireplace">
+      <div class="slider-caption"><i class="fas fa-crown"></i> Golden Elegance</div>
+    </div>
+    <div class="slider-item">
+      <img src="https://images.unsplash.com/photo-1601924638867-3ec4e8b0b0b4?q=80&w=2069" alt="Silver Finish Fireplace">
+      <div class="slider-caption"><i class="fas fa-gem"></i> Silver Modernity</div>
+    </div>
+    <div class="slider-item">
+      <img src="https://images.unsplash.com/photo-1588854337115-1c67d9247e4d?q=80&w=2070" alt="Brass Finish Fireplace">
+      <div class="slider-caption"><i class="fas fa-fire"></i> Brass Warmth</div>
+    </div>
+    <div class="slider-item">
+      <img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?q=80&w=2070" alt="Black Finish Fireplace">
+      <div class="slider-caption"><i class="fas fa-moon"></i> Matte Black Boldness</div>
+    </div>
+  </div>
+</div>
+
+<!-- METAL FINISH SECTIONS -->
+<div class="sections-grid">
+  <div class="section-card gold">
+    <div class="section-header">
+      <div class="section-icon">
+        <i class="fas fa-crown"></i>
+      </div>
+      <h2>Golden Finish Collection</h2>
+    </div>
+    <p>Luxury golden metal reflects warmth and elegance, creating a royal focal point for premium fireplaces with timeless appeal.</p>
+    <ul class="features-list">
+      <li>24K gold-plated accents for maximum brilliance</li>
+      <li>Heat-resistant lacquer protects the luxurious finish</li>
+      <li>Custom engraving options available</li>
+      <li>Perfect for traditional and contemporary luxury spaces</li>
+    </ul>
+  </div>
+
+  <div class="section-card silver">
+    <div class="section-header">
+      <div class="section-icon">
+        <i class="fas fa-gem"></i>
+      </div>
+      <h2>Silver Finish Collection</h2>
+    </div>
+    <p>Modern silver steel offers sleek reflections and contemporary brilliance, perfect for stylish minimalist interiors.</p>
+    <ul class="features-list">
+      <li>Brushed stainless steel with mirror polish options</li>
+      <li>Corrosion-resistant for humid environments</li>
+      <li>Reflective surfaces enhance ambient lighting</li>
+      <li>Ideal for modern loft and industrial designs</li>
+    </ul>
+  </div>
+
+  <div class="section-card brass">
+    <div class="section-header">
+      <div class="section-icon">
+        <i class="fas fa-fire"></i>
+      </div>
+      <h2>Brass Finish Collection</h2>
+    </div>
+    <p>Brass tones provide classic warmth and rich texture, enhancing traditional and transitional fireplace designs.</p>
+    <ul class="features-list">
+      <li>Patina options from polished to antiqued finishes</li>
+      <li>Develops character with age and use</li>
+      <li>Excellent heat distribution properties</li>
+      <li>Pairs beautifully with wood and stone accents</li>
+    </ul>
+  </div>
+
+  <div class="section-card black">
+    <div class="section-header">
+      <div class="section-icon">
+        <i class="fas fa-moon"></i>
+      </div>
+      <h2>Matte Black Collection</h2>
+    </div>
+    <p>Dark gradient black iron creates bold contrast, enhancing flame visibility and architectural depth in modern spaces.</p>
+    <ul class="features-list">
+      <li>Powder-coated finish resists scratches and fingerprints</li>
+      <li>Creates dramatic contrast with firelight</li>
+      <li>Textured finishes hide wear and maintenance marks</li>
+      <li>Perfect for contemporary and industrial designs</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SPECIAL SECTIONS -->
+<div class="container">
+  <div class="special-section fade-in">
+    <div class="special-header">
+      <div class="special-icon">
+        <i class="fas fa-star"></i>
+      </div>
+      <h2>Premium Features & Benefits</h2>
+    </div>
+    <ul class="special-list">
+      <li>High-grade metal construction ensures durability</li>
+      <li>Heat-resistant coatings protect color integrity</li>
+      <li>Elegant surface textures enhance flame reflection</li>
+      <li>Weather-proof materials for indoor/outdoor use</li>
+      <li>Custom sizing tailored to your exact specifications</li>
+      <li>Professional installation by certified technicians</li>
+    </ul>
+  </div>
+
+  <div class="special-section fade-in">
+    <div class="special-header">
+      <div class="special-icon">
+        <i class="fas fa-handshake"></i>
+      </div>
+      <h2>Why Choose The Victorian</h2>
+    </div>
+    <ul class="special-list">
+      <li>Fully custom designs to match your vision</li>
+      <li>Premium materials from trusted global sources</li>
+      <li>Expert craftsmanship with attention to detail</li>
+      <li>Transparent pricing with no hidden costs</li>
+      <li>Lifetime guarantee on materials and workmanship</li>
+      <li>Complimentary design consultation included</li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Contact Information</h3>
+      <ul class="contact-info">
+        <li>
+          <i class="fas fa-envelope"></i>
+          <div>
+            <strong>Email</strong><br>
+            <a href="mailto:directorthevictorianltd@gmail.com">directorthevictorianltd@gmail.com</a>
+          </div>
+        </li>
+        <li>
+          <i class="fas fa-phone"></i>
+          <div>
+            <strong>Phone</strong><br>
+            <a href="tel:+923342073755">(+92) 334-207 3755</a>
+          </div>
+        </li>
+        <li>
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <strong>Location</strong><br>
+            Serving nationwide across Pakistan
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Business Hours</h3>
+      <div class="business-hours">
+        <div class="hour-item">
+          <span>Monday - Friday</span>
+          <span>9:00 AM – 7:00 PM</span>
+        </div>
+        <div class="hour-item">
+          <span>Saturday</span>
+          <span>10:00 AM – 5:00 PM</span>
+        </div>
+        <div class="hour-item">
+          <span>Sunday</span>
+          <span>By Appointment Only</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h3>Free Consultation</h3>
+      <div class="consultation-cta">
+        <h4>Ready to Transform Your Space?</h4>
+        <p>Book a complimentary design consultation with our experts</p>
+        <a href="mailto:directorthevictorianltd@gmail.com?subject=Free Consultation Request" class="consultation-btn">
+          <i class="fas fa-calendar-check"></i> Schedule Now
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="copyright">
+    <p>© 2023 The Victorian Ltd. | Premium Metal Fireplace Specialists | All Rights Reserved</p>
+    <p>Crafted with <i class="fas fa-heart" style="color: #d4af37;"></i> for exceptional living spaces</p>
+  </div>
+</footer>
+
+<script>
+// Simple fade-in animation on scroll
+document.addEventListener('DOMContentLoaded', function() {
+  const fadeElements = document.querySelectorAll('.fade-in');
+  
+  const fadeInOnScroll = function() {
+    fadeElements.forEach(element => {
+      const elementTop = element.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      
+      if (elementTop < windowHeight - 100) {
+        element.style.opacity = '1';
+        element.style.transform = 'translateY(0)';
+      }
+    });
+  };
+  
+  // Set initial state
+  fadeElements.forEach(element => {
+    element.style.opacity = '0';
+    element.style.transform = 'translateY(30px)';
+    element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+  });
+  
+  // Check on load and scroll
+  fadeInOnScroll();
+  window.addEventListener('scroll', fadeInOnScroll);
+  
+  // Slider animation
+  const slider = document.querySelector('.slider');
+  let isPaused = false;
+  
+  slider.addEventListener('mouseenter', () => {
+    isPaused = true;
+  });
+  
+  slider.addEventListener('mouseleave', () => {
+    isPaused = false;
+  });
+  
+  // Simple manual slider animation
+  setInterval(() => {
+    if (!isPaused && slider.firstElementChild) {
+      const firstItem = slider.firstElementChild;
+      slider.style.transition = 'transform 0.5s ease';
+      slider.style.transform = `translateX(-${firstItem.offsetWidth + 25}px)`;
+      
+      setTimeout(() => {
+        slider.style.transition = 'none';
+        slider.appendChild(firstItem);
+        slider.style.transform = 'translateX(0)';
+      }, 500);
+    }
+  }, 3000);
+});
+</script>
+
+</body>
+</html>
